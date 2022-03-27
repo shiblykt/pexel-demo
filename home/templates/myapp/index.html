@@ -14,7 +14,8 @@
     <div class="hero-image">
         <!--sticky navbar inside hero -->
         <div class="nav">
-            <img id="logo" src="{%  static 'assets/logo.png' %}" alt="">            
+            <img id="logo" src="{%  static 'assets/logo.png' %}" alt="">  
+            <button id="join">Join</button>          
         </div>
         <!--text inside hero-->
         <div class="hero-text">
@@ -39,9 +40,24 @@
     </div>
     <!--tab section end-->
     <!--title and dropdown-->
-    <div class="title-tab">
-        <h3 id="title">Free Stock Photos</h3>
+    <div class="title-tab-container">
+        <div class="title-tab">
+            <h3 id="title">Free Stock Photos</h3>
+        </div>
+        <div class="drop-down-div">
+            <div class="dropdown">
+                <span>Trending</span>
+                <div class="dropdown-content">
+                <a href=""><p><b>Trending</b></p></a>
+                <a href=""><p><b>New</b></p></a>
+                <a href=""><p><b>Following</b></p></a>
+                </div>
+              </div>
+        </div>
     </div>
+    
+    
+      
     <!--end of dropdown-->
     <!--grid container-->
     <div class="grid-container">
@@ -51,7 +67,6 @@
         <div class="item4"><img src="{% static 'assets/image3.jpg' %}" alt=""></div>
         <div class="item5"><video src="{% static 'assets/vid1.mp4' %}" controls></video></div>
         <div class="item6"><img src="{% static 'assets/image4.jpg' %}" alt=""></div>
-        
     </div>
     <!--end of grid-->
 </body>

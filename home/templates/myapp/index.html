@@ -1,73 +1,54 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Free Stock Photos, Royalty Free Stock Images & Copyright Free Pictures · Pexels</title>
-    <link rel="icon"  href="{% static 'assets/favicon.ico' %}">
-    <link rel="stylesheet" href="{% static 'style/main.css' %}">
-</head>
-<body>
-    <!--hero image-->
-    <div class="hero-image">
-        <!--sticky navbar inside hero -->
-        <div class="nav">
-            <img id="logo" src="{%  static 'assets/logo.png' %}" alt="">  
-            <button id="join">Join</button>          
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Free Stock Photos, Royalty Free Stock Images & Copyright Free Pictures ·
+      Pexels
+    </title>
+    <link rel="icon" href="{% static 'assets/favicon.ico' %}" />
+    <link rel="stylesheet" href="{% static 'style/main.css' %}" />
+  </head>
+  <body>
+    <section>
+      <div class="hero-image">
+        <div class="nav1" id="nav1">
+          <img id="logo" src="{%  static 'assets/logo.png' %}" alt="" />
+          <button class="join-button1">Join</button>
         </div>
-        <!--text inside hero-->
-        <div class="hero-text">
-            <h1 style="font-size:50px">
-            The best free stock photos, royalty free images & videos shared by creators.
-            </h1>
-            <!--search bar inside hero-->
-            <div>
-                <input type="text" placeholder="Search for free photos and videos">
-                <button>search</button>
-            </div>
+        <div class="nav" id="nav" style="display: none">
+          <img id="logo" src="{%  static 'assets/logo.png' %}" alt="" />
+          <button class="join-button">Join</button>
         </div>
-    </div>
-    <!--hero image end-->
-    <!--tab secton under hero-->
-    <div class="nav-tabs">
-        <a class="tabs" href="#home">Home</a>
-        <a class="tabs" href="#news">Discover</a>
-        <a class="tabs" href="#contact">Videos</a>
-        <a class="tabs" href="#home">Leaderboard</a>
-        <a class="tabs" href="#news">Challenges</a>
-    </div>
-    <!--tab section end-->
-    <!--title and dropdown-->
-    <div class="title-tab-container">
-        <div class="title-tab">
-            <h3 id="title">Free Stock Photos</h3>
-        </div>
-        <div class="drop-down-div">
-            <div class="dropdown">
-                <span>Trending</span>
-                <div class="dropdown-content">
-                <a href=""><p><b>Trending</b></p></a>
-                <a href=""><p><b>New</b></p></a>
-                <a href=""><p><b>Following</b></p></a>
-                </div>
-              </div>
-        </div>
-    </div>
-    
-    
-      
-    <!--end of dropdown-->
-    <!--grid container-->
-    <div class="grid-container">
-        <div class="item1"><img src="{% static 'assets/image2.jpg' %}" alt=""></div>
-        <div class="item2"><img src="{% static 'assets/image5.jpg' %}" alt=""></div>
-        <div class="item3"><img src="{% static 'assets/image1.jpg' %}" alt=""></div>
-        <div class="item4"><img src="{% static 'assets/image3.jpg' %}" alt=""></div>
-        <div class="item5"><video src="{% static 'assets/vid1.mp4' %}" controls></video></div>
-        <div class="item6"><img src="{% static 'assets/image4.jpg' %}" alt=""></div>
-    </div>
-    <!--end of grid-->
-</body>
+      </div>
+    </section>
+
+    <section class="grid-container">
+      <div class="image">
+        <img src="{% static 'assets/image1.jpg' %}" alt="" />
+      </div>
+      <div class="image">
+        <img src="{% static 'assets/image1.jpg' %}" alt="" />
+      </div>
+      <div class="image">
+        <img src="{% static 'assets/image1.jpg' %}" alt="" />
+      </div>
+      <div class="image">
+        <img src="{% static 'assets/image1.jpg' %}" alt="" />
+      </div>
+    </section>
+  </body>
+  <script>
+    window.onscroll = function () {
+      var currentScrollPos = window.pageYOffset;
+      if (currentScrollPos > 50) {
+        document.getElementById('nav').style.display = 'block';
+      } else {
+        document.getElementById('nav').style.display = 'none';
+      }
+    };
+  </script>
 </html>
